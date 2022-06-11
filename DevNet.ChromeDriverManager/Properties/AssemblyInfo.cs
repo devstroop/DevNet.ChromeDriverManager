@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DevNet.ChromeDriverManager")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Install, uninstall and update chromedriver")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Devstroop Technologies")]
 [assembly: AssemblyProduct("DevNet.ChromeDriverManager")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
