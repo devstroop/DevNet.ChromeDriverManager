@@ -26,6 +26,8 @@ namespace DevNet
                 return System.IO.Path.Combine(_LOCATION ?? System.IO.Directory.GetCurrentDirectory(), "chromedriver.exe").Replace("\\", "/");
             }
         }
+
+        // public (set)
         public static string LOCATION
         {
             set
@@ -40,6 +42,8 @@ namespace DevNet
         {
             get { return _DOWNLOAD_PROGRESS_PERCENTAGE; }
         }
+
+        // public (get)
         public static string LATEST_VERSION
         {
             get
@@ -57,6 +61,8 @@ namespace DevNet
                 }
             }
         }
+
+        // public (get)
         public static string INSTALLED_VERSION
         {
             get
@@ -73,9 +79,10 @@ namespace DevNet
 
         private static System.Net.WebClient client;
 
+
         public static void InstallOrUpdate()
         {
-            Uninstall();
+            try { System.IO.File.Delete(ARCHIVE_PATH); } catch { }
             using (client = new System.Net.WebClient())
             {
                 System.Uri uri = new System.Uri("https://chromedriver.storage.googleapis.com/" + LATEST_VERSION + "/chromedriver_win32.zip");
@@ -83,14 +90,12 @@ namespace DevNet
                 client.DownloadFileAsync(uri, ARCHIVE_PATH);
             }
         }
-
         public static void Uninstall()
         {
             Utility.DestroyAllChromeDrivers();
-            try { System.IO.File.Delete(ARCHIVE_PATH); } catch { }
             try { System.IO.File.Delete(CHROMEDRIVER_PATH); } catch { }
+            try { System.IO.File.Delete(ARCHIVE_PATH); } catch { }
         }
-
         private static void DownloadProgressChanged(object sender, System.Net.DownloadProgressChangedEventArgs e)
         {
             if (e.ProgressPercentage < 100)
@@ -102,6 +107,7 @@ namespace DevNet
                 Utility.WaitForFileToBeReady(ARCHIVE_PATH, System.TimeSpan.FromSeconds(30));
                 using (System.IO.Compression.ZipArchive archive = System.IO.Compression.ZipFile.OpenRead(ARCHIVE_PATH))
                 {
+                    Utility.DestroyAllChromeDrivers();
                     foreach (System.IO.Compression.ZipArchiveEntry entry in archive.Entries)
                     {
                         try { System.IO.File.Delete(System.IO.Path.Combine(ARCHIVE_DIRECTORY, entry.FullName)); } catch { }
