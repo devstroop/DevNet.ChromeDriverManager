@@ -80,7 +80,7 @@ namespace DevNet
         private static System.Net.WebClient client;
 
 
-        public static void InstallOrUpdate(string version)
+        public static void InstallOrUpdate(string version = null)
         {
             try { System.IO.File.Delete(ARCHIVE_PATH); } catch { }
             using (client = new System.Net.WebClient())
