@@ -12,6 +12,6 @@
     <description>$description$</description>
     <releaseNotes>First release.</releaseNotes>
     <copyright>$copyright$</copyright>
-    <tags>chromedriver webdriver autoinstall install manage</tags>
+    <tags>selenium chromedriver webdriver auto autoinstall install manage</tags>
   </metadata>
 </package>
