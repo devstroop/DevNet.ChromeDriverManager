@@ -52,5 +52,8 @@
   <ItemGroup>
     <None Include="DevNet.ChromeDriverManager.nuspec" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
