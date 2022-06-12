@@ -24,15 +24,20 @@ Get Latest Version
 string latestVersion = DevNet.ChromeDriverManager.LATEST_VERSION;
 Console.WriteLine(latestVersion);
 ```
-Install Latest
+Install Latest Version
 
 ```sh
-DevNet.ChromeDriverManager.InstallOrUpdate();
+DevNet.ChromeDriverManager.InstallLatest();
 ```
 Install Specific Version
 
 ```sh
-DevNet.ChromeDriverManager.InstallOrUpdate(version: "103.0.5060.24");
+DevNet.ChromeDriverManager.InstallSpecified(version: "103.0.5060.24");
+```
+Install Compatible with Chrome
+
+```sh
+DevNet.ChromeDriverManager.InstallWithCompatiblity();
 ```
 Installation Status (Only while installing ChromeDriver)
 
