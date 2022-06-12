@@ -1,6 +1,6 @@
 # DevNet.ChromeDriverManager
 ## _Manage chromedriver distribution and autoinstall_
-Version 1.0.3 (Pre-Release)
+Version 1.0.3 (Latest)
 ![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)
 
 .Net library that sets up and give access to manage chromedriver 
