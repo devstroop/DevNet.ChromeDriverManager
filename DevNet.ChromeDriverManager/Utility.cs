@@ -2,22 +2,26 @@
 {
     public class Utility
     {
-        public static void GetGoogleChromeInstalledVersion()
+        public static string GetGoogleChromeInstalledVersion()
         {
             bool is64bit = !string.IsNullOrEmpty(System.Environment.GetEnvironmentVariable("PROCESSOR_ARCHITEW6432"));
             if (is64bit)
             {
-                string cmd = "wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value";
-                string result = ExecuteCommandSync(cmd);
-                System.Console.WriteLine(result);
+                try
+                {
+                    return System.Diagnostics.FileVersionInfo.GetVersionInfo(@"C:\Program Files\Google\Chrome\Application\chrome.exe").FileVersion;
+                }
+                catch { }
             }
             else
             {
-                string cmd = "wmic datafile where name='C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe' get Version /value";
-                ExecuteCommandSync(cmd);
-                string result = ExecuteCommandSync(cmd);
-                System.Console.WriteLine(result);
+                try
+                {
+                    return System.Diagnostics.FileVersionInfo.GetVersionInfo(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe").FileVersion;
+                }
+                catch { }
             }
+            return null;
         }
         public async static void DestroyAllChromeDrivers()
         {

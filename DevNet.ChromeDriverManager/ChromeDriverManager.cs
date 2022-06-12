@@ -80,23 +80,40 @@ namespace DevNet
         private static System.Net.WebClient client;
 
 
-        public static void InstallOrUpdate(string version = null)
+        public static void InstallSpecified(string version)
         {
             try { System.IO.File.Delete(ARCHIVE_PATH); } catch { }
             using (client = new System.Net.WebClient())
             {
-                System.Uri uri;
-                if (version != null)
-                {
-                    uri = new System.Uri("https://chromedriver.storage.googleapis.com/" + version + "/chromedriver_win32.zip");
-                }
-                else
-                {
-                    uri = new System.Uri("https://chromedriver.storage.googleapis.com/" + LATEST_VERSION + "/chromedriver_win32.zip");
-                }
+                System.Uri uri = new System.Uri("https://chromedriver.storage.googleapis.com/" + version + "/chromedriver_win32.zip");
                 client.DownloadProgressChanged += DownloadProgressChanged;
                 client.DownloadFileAsync(uri, ARCHIVE_PATH);
             }
+        }
+        public static void InstallLatest()
+        {
+            try { System.IO.File.Delete(ARCHIVE_PATH); } catch { }
+            using (client = new System.Net.WebClient())
+            {
+                System.Uri uri = new System.Uri("https://chromedriver.storage.googleapis.com/" + LATEST_VERSION + "/chromedriver_win32.zip");
+                client.DownloadProgressChanged += DownloadProgressChanged;
+                client.DownloadFileAsync(uri, ARCHIVE_PATH);
+            }
+        }
+        public static void InstallWithCompatiblity()
+        {
+            try { System.IO.File.Delete(ARCHIVE_PATH); } catch { }
+            string _ChromeVersion = Utility.GetGoogleChromeInstalledVersion();
+            if(_ChromeVersion != null)
+            {
+                using (client = new System.Net.WebClient())
+                {
+                    System.Uri uri = new System.Uri("https://chromedriver.storage.googleapis.com/" + $"LATEST_RELEASE_{_ChromeVersion}" + "/chromedriver_win32.zip");
+                    client.DownloadProgressChanged += DownloadProgressChanged;
+                    client.DownloadFileAsync(uri, ARCHIVE_PATH);
+                }
+            }
+            
         }
         public static void Uninstall()
         {
