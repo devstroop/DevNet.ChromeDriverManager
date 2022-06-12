@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/generate_package.bat
+/nuget.apikey
+/push_package.bat

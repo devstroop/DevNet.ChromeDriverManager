@@ -11,7 +11,7 @@
 	<!--<PackageIcon>icon.png</PackageIcon>-->
     <projectUrl>https://github.com/itsalfredakku/DevNet.ChromeDriverManager</projectUrl>
     <description>$description$</description>
-    <releaseNotes> + Installation by specific version integrated</releaseNotes>
+    <releaseNotes> * Fixed InstallOrUpdate Method</releaseNotes>
     <copyright>$copyright$</copyright>
     <tags>selenium chromedriver webdriver auto autoinstall install manage</tags>
   </metadata>
