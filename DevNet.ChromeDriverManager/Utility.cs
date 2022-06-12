@@ -2,6 +2,23 @@
 {
     public class Utility
     {
+        public static void GetGoogleChromeInstalledVersion()
+        {
+            bool is64bit = !string.IsNullOrEmpty(System.Environment.GetEnvironmentVariable("PROCESSOR_ARCHITEW6432"));
+            if (is64bit)
+            {
+                string cmd = "wmic datafile where name='C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' get Version /value";
+                string result = ExecuteCommandSync(cmd);
+                System.Console.WriteLine(result);
+            }
+            else
+            {
+                string cmd = "wmic datafile where name='C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe' get Version /value";
+                ExecuteCommandSync(cmd);
+                string result = ExecuteCommandSync(cmd);
+                System.Console.WriteLine(result);
+            }
+        }
         public async static void DestroyAllChromeDrivers()
         {
             try
@@ -39,8 +56,6 @@
         }
         public static bool IsFileReady(string filename)
         {
-            // If the file can be opened for exclusive access it means that the file
-            // is no longer locked by another process.
             try
             {
                 using (System.IO.FileStream inputStream = System.IO.File.Open(filename, System.IO.FileMode.Open, System.IO.FileAccess.Read, System.IO.FileShare.None))

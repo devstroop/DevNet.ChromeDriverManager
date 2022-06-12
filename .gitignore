@@ -364,3 +364,4 @@ FodyWeavers.xsd
 /generate_package.bat
 /nuget.apikey
 /push_package.bat
+/Example
