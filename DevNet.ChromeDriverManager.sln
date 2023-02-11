@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32228.343
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevNet.ChromeDriverManager", "DevNet.ChromeDriverManager\DevNet.ChromeDriverManager.csproj", "{15D54E64-AFB0-48EB-B167-D2FCB3DB30E6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{32648D97-F1FE-41CC-AE4F-1CBCF8F502AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevNet.ChromeDriverManager", "DevNet.ChromeDriverManager\DevNet.ChromeDriverManager.csproj", "{95AF6F88-9A04-4D32-92B5-06EC31C0BC40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,19 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{15D54E64-AFB0-48EB-B167-D2FCB3DB30E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{15D54E64-AFB0-48EB-B167-D2FCB3DB30E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{15D54E64-AFB0-48EB-B167-D2FCB3DB30E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{15D54E64-AFB0-48EB-B167-D2FCB3DB30E6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{32648D97-F1FE-41CC-AE4F-1CBCF8F502AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32648D97-F1FE-41CC-AE4F-1CBCF8F502AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{32648D97-F1FE-41CC-AE4F-1CBCF8F502AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32648D97-F1FE-41CC-AE4F-1CBCF8F502AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95AF6F88-9A04-4D32-92B5-06EC31C0BC40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95AF6F88-9A04-4D32-92B5-06EC31C0BC40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95AF6F88-9A04-4D32-92B5-06EC31C0BC40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95AF6F88-9A04-4D32-92B5-06EC31C0BC40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {57297B2A-A21E-4A1D-AB23-6F7C495F63C2}
+		SolutionGuid = {0DF1214A-EC50-47DC-B3FF-E5A86E3EE8D9}
 	EndGlobalSection
 EndGlobal

@@ -1,4 +1,10 @@
-﻿namespace DevNet
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DevNet
 {
     public class Utility
     {
@@ -40,6 +46,7 @@
                 await System.Threading.Tasks.Task.Delay(500);
             });
         }
+
         public static string ExecuteCommandSync(object command)
         {
             try
