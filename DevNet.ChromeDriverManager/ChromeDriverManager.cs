@@ -56,7 +56,7 @@ namespace DevNet
         public void Install(string Version = null)
         {
             Version = Version ?? LatestAvailable();
-            FrmInstaller frmInstaller = new FrmInstaller(Location, Version, "Installing driver", $"Please wait,\nChromedriver ver. {Version} installation in progress");
+            FrmInstaller frmInstaller = new FrmInstaller(Location, Version, "Installing driver", $"Please wait, Chromedriver download in progress\nVer. {Version}");
             frmInstaller.ShowDialog();
         }
     }

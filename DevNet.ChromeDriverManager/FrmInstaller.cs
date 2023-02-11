@@ -63,6 +63,7 @@ namespace DevNet
         }
         private void DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
         {
+            this.lblMessage.Text = "Chromedriver downoad successful,\nInstallation is in progress.";
             if (e.Cancelled)
             {
                 MessageBox.Show("The chromedriver installation has been cancelled", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);

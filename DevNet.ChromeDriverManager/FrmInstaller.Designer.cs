@@ -43,9 +43,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DevNet.Properties.Resources.loading_gif;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 57);
+            this.pictureBox1.Size = new System.Drawing.Size(87, 70);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -56,17 +57,19 @@
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
             this.flowLayoutPanel1.Controls.Add(this.lnkCancel);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(101, 12);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(135, 15);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(477, 96);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(561, 98);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(3, 0);
+            this.lblMessage.Location = new System.Drawing.Point(4, 0);
+            this.lblMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(115, 30);
+            this.lblMessage.Size = new System.Drawing.Size(126, 32);
             this.lblMessage.TabIndex = 3;
             this.lblMessage.Text = "Message should be\r\nShown here";
             // 
@@ -74,34 +77,38 @@
             // 
             this.flowLayoutPanel2.Controls.Add(this.progressBar1);
             this.flowLayoutPanel2.Controls.Add(this.progressPercent);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 33);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 36);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(462, 24);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(551, 30);
             this.flowLayoutPanel2.TabIndex = 4;
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(3, 3);
+            this.progressBar1.Location = new System.Drawing.Point(4, 4);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(347, 17);
+            this.progressBar1.Size = new System.Drawing.Size(463, 21);
             this.progressBar1.TabIndex = 5;
             // 
             // progressPercent
             // 
             this.progressPercent.AutoSize = true;
             this.progressPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.progressPercent.Location = new System.Drawing.Point(356, 0);
+            this.progressPercent.Location = new System.Drawing.Point(475, 0);
+            this.progressPercent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.progressPercent.Name = "progressPercent";
-            this.progressPercent.Size = new System.Drawing.Size(35, 20);
+            this.progressPercent.Size = new System.Drawing.Size(55, 20);
             this.progressPercent.TabIndex = 6;
-            this.progressPercent.Text = "0%";
+            this.progressPercent.Text = "100%";
             // 
             // lnkCancel
             // 
             this.lnkCancel.AutoSize = true;
-            this.lnkCancel.Location = new System.Drawing.Point(3, 60);
+            this.lnkCancel.Location = new System.Drawing.Point(4, 70);
+            this.lnkCancel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lnkCancel.Name = "lnkCancel";
-            this.lnkCancel.Size = new System.Drawing.Size(45, 15);
+            this.lnkCancel.Size = new System.Drawing.Size(49, 16);
             this.lnkCancel.TabIndex = 5;
             this.lnkCancel.TabStop = true;
             this.lnkCancel.Text = "Cancel";
@@ -109,12 +116,13 @@
             // 
             // FrmInstaller
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 120);
+            this.ClientSize = new System.Drawing.Size(709, 119);
             this.ControlBox = false;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmInstaller";
             this.Text = "FrmInstaller";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmInstaller_FormClosed);
