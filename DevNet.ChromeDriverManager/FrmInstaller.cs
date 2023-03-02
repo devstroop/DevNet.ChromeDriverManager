@@ -47,9 +47,11 @@ namespace DevNet
             {
                 System.Uri uri = new System.Uri("https://chromedriver.storage.googleapis.com/" + VERSION + "/chromedriver_win32.zip");
                 client.DownloadProgressChanged += DownloadProgressChanged;
+                client.DownloadFileCompleted += DownloadFileCompleted;
                 client.DownloadFileAsync(uri, ARCHIVE_PATH);
             }
         }
+
 
         private void FrmInstaller_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -63,7 +65,7 @@ namespace DevNet
         }
         private void DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
         {
-            this.lblMessage.Text = "Chromedriver downoad successful,\nInstallation is in progress.";
+            this.lblMessage.Text = "Chromedriver downoaded successfully,\nInstallation in progress.";
             if (e.Cancelled)
             {
                 MessageBox.Show("The chromedriver installation has been cancelled", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
